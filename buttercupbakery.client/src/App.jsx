@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Main from './Components/MainComponent'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-    return <div><Main /></div>;
+    return (
+        <BrowserRouter>
+            <div><Main /></div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
