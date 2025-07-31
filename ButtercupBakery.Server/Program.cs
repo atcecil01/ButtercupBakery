@@ -27,4 +27,6 @@ app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
 
+DatabaseHelper.InitializeDatabase();
+
 app.Run();
