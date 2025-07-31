@@ -1,14 +1,12 @@
 namespace ButtercupBakery.Server
 {
-    public class Recipe
+    public class Ingredient
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public int Category { get; set; }
-        public int? PreparationTime { get; set; } // in minutes
-
-        public List<string> Ingredients { get; set; } = new List<string>();
-        public List<string> Instructions { get; set; } = new List<string>();
+        public string Quantity { get; set; } = string.Empty;
+        public string Unit { get; set; } = string.Empty;
+        public int SortOrder { get; set; }
+        public int RecipeId { get; set; } // Foreign key to Recipe
     }
 }
