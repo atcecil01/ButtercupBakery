@@ -57,8 +57,8 @@ public static class DatabaseHelper
                     FOREIGN KEY (RecipeId) REFERENCES Recipe(Id)
                 );
             ";
-            string createInsructionTableQuery = @"
-                CREATE TABLE IF NOT EXISTS Insruction (
+            string createInstructionTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Instruction (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     Name TEXT NOT NULL,
                     SortOrder INTEGER NOT NULL,
@@ -78,7 +78,7 @@ public static class DatabaseHelper
                 command.CommandText = createIngredientTableQuery;
                 command.ExecuteNonQuery();
 
-                command.CommandText = createInsructionTableQuery;
+                command.CommandText = createInstructionTableQuery;
                 command.ExecuteNonQuery();
 
                 Console.WriteLine("Database initialized successfully.");
