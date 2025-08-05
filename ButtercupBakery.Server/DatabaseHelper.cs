@@ -67,6 +67,14 @@ public static class DatabaseHelper
                 );
             ";
 
+            string createVersionTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Version (
+                      [Id] INT NOT NULL PRIMARY KEY DEFAULT AUTO_INCREMENT
+                    , [Version] NUMERIC NOT NULL
+                    , [DATE] DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+                );
+            ";
+
             using (var command = new SQLiteCommand(connection))
             {
                 command.CommandText = createCategoryTableQuery;
@@ -81,7 +89,55 @@ public static class DatabaseHelper
                 command.CommandText = createInstructionTableQuery;
                 command.ExecuteNonQuery();
 
+                command.CommandText = createVersionTableQuery;
+                command.ExecuteNonQuery();
+
                 Console.WriteLine("Database initialized successfully.");
+            }
+        }
+    }
+
+    public static void UpdateDatabase()
+    {
+        string updatePath = @"Files\DatabaseUpdateScripts\";
+
+        string[] files = Directory.GetFiles(updatePath, "*.sql");
+        if (files.Length == 0)
+        {
+            Console.WriteLine("No update scripts found.");
+            return;
+        }
+
+        using (var connection = GetConnection())
+        {
+            connection.Open();
+            int? versionNumber;
+            using (var command = new SQLiteCommand(connection))
+            {
+                command.CommandText = "SELECT [Version] FROM [Version] ORDER BY [Version] DESC LIMIT 1";
+                versionNumber = (int?)command.ExecuteScalar();
+            }
+
+            if (versionNumber == null)
+            {
+                versionNumber = 0;
+            }
+
+            files = files.Where(f => int.Parse(Path.GetFileNameWithoutExtension(f)) > versionNumber).OrderBy(f => f).ToArray();
+            if (files.Length == 0)
+            {
+                Console.WriteLine("No new update scripts to apply.");
+                return;
+            }
+
+            foreach (var file in files)
+            {
+                string script = File.ReadAllText(file);
+                using (var command = new SQLiteCommand(script, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+                Console.WriteLine($"Executed update script: {Path.GetFileName(file)}");
             }
         }
     }
