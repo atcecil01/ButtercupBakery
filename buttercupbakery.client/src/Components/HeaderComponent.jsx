@@ -7,8 +7,9 @@ function Header() {
         <Fragment>
             <div>Buttercup Bakery</div>
             <nav>
-                <Link to='/home'>Home</Link>
-                <Link to='/about'>About</Link>
+                <Link to='/Home'>Home</Link>
+                <Link to='/About'>About</Link>
+                <Link to='/RecipeList'>Recipes</Link>
             </nav>
         </Fragment>
     )

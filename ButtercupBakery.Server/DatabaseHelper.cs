@@ -111,11 +111,11 @@ public static class DatabaseHelper
         using (var connection = GetConnection())
         {
             connection.Open();
-            int? versionNumber;
+            decimal? versionNumber;
             using (var command = new SQLiteCommand(connection))
             {
                 command.CommandText = "SELECT [Version] FROM [Version] ORDER BY [Version] DESC LIMIT 1";
-                versionNumber = (int?)command.ExecuteScalar();
+                versionNumber = (decimal?)command.ExecuteScalar();
             }
 
             if (versionNumber == null)

@@ -5,6 +5,8 @@ import Home from './HomeComponent'
 import About from './AboutComponent'
 
 import {Routes, Route, Navigate} from 'react-router-dom'
+import RecipeList from './RecipeListComponent'
+import AddRecipe from './AddRecipeComponent'
 
 
 function Main () {
@@ -15,8 +17,8 @@ function Main () {
                 <Route path='/' element={<Navigate to='/home' />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/add-recipe' element={<div>Add Recipe</div>} />
-                <Route path='/recipes' element={<div>Recipes</div>} />
+                <Route path='/add-recipe' element={<AddRecipe />} />
+                <Route path='/recipelist' element={<RecipeList />} />
                 <Route path='*' element={<Navigate to='/home' />} />
             </Routes>
             <Footer />
