@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 function Header() {
     return(
         <Fragment>
-            <div>Buttercup Bakery</div>
-            <nav>
-                <Link to='/Home'>Home</Link>
-                <Link to='/About'>About</Link>
-                <Link to='/RecipeList'>Recipes</Link>
+            <div id='maintitle'>Buttercup Bakery</div>
+            <nav className='navbar rounded-top'>
+                <Link to='/Home' className='navlink px-5'>Home</Link>
+                <Link to='/About' className='navlink px-5'>About</Link>
+                <Link to='/RecipeList' className='navlink px-5'>Recipes</Link>
             </nav>
         </Fragment>
     )

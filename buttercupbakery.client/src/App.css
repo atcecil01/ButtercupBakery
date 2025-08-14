@@ -3,9 +3,30 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+    font-family: cursive;
+    height: 100vh;
 }
 
 th, td {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+#maintitle {
+    font-size: xx-large;
+}
+
+.navbar {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.navlink {
+    font-size: large;
+    color: black;
+    text-decoration: none;
+}
+
+.body{
+    height: 75vh;
 }
