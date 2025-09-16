@@ -18,7 +18,7 @@ function Main () {
                 <Route path='/' element={<Navigate to='/home' />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/add-recipe' element={<AddRecipe />} />
+                <Route path='/addrecipe' element={<AddRecipe />} />
                 <Route path='/recipelist' element={<RecipeList />} />
                 <Route path='*' element={<Navigate to='/home' />} />
                 </Routes>

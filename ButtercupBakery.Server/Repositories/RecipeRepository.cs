@@ -20,7 +20,7 @@ namespace ButtercupBakery.Server.Repositories
                     recipes.Add(new Recipe()
                     {
                         Id = reader.GetInt32(0),
-                        Name = reader.GetString(1),
+                        RecipeName = reader.GetString(1),
                         Description = reader.GetString(2),
                         CategoryId = reader.GetInt32(3),
                         PreparationTime = reader.GetInt32(4)

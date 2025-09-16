@@ -3,7 +3,7 @@ namespace ButtercupBakery.Server
     public class Recipe
     {
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string RecipeName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int CategoryId { get; set; } //Foreign key to Category
         public int? PreparationTime { get; set; } // in minutes
