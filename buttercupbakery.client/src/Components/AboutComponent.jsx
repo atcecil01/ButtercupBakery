@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 function About() {
     return(
         <Fragment>
-            <div>About</div>
+            <h2 id="pagetitle">About</h2>
         </Fragment>
     )
 }

@@ -4,7 +4,7 @@ function AddRecipe() {
 
     return (
         <Fragment>
-            <div>Add Recipe</div>
+            <h2 id="pagetitle">Add Recipe</h2>
             <form>
                 <label>Recipe Name: </label>
                 <input type='text' name='recipeName' />
