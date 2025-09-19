@@ -1,5 +1,8 @@
+import { Button } from 'bootstrap';
 import { useEffect, useState } from 'react';
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
+
 function RecipeList() {
     const [recipes, setRecipes] = useState();
 
@@ -18,6 +21,7 @@ function RecipeList() {
     return (
         <Fragment>
             <div>Recipes:</div>
+            <Link to='/AddRecipe'><button>Add New Recipe</button></Link>
             {contents}
         </Fragment>
     )

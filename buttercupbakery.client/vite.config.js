@@ -54,6 +54,10 @@ export default defineConfig({
             '^/recipelist': {
                 target,
                 secure: false
+            },
+            '^/category': {
+                target,
+                secure: false
             }
         },
         port: parseInt(env.DEV_SERVER_PORT || '52343'),
