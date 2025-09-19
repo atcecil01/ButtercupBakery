@@ -12,18 +12,20 @@ import AddRecipe from './AddRecipeComponent'
 function Main () {
     return(
         <React.Fragment>
-            <Header />
-            <div className='body'>
-            <Routes>
-                <Route path='/' element={<Navigate to='/home' />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/addrecipe' element={<AddRecipe />} />
-                <Route path='/recipelist' element={<RecipeList />} />
-                <Route path='*' element={<Navigate to='/home' />} />
-                </Routes>
+            <div className='app-container'>
+                <Header />
+                <div className='body'>
+                <Routes>
+                    <Route path='/' element={<Navigate to='/home' />} />
+                    <Route path='/home' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/addrecipe' element={<AddRecipe />} />
+                    <Route path='/recipelist' element={<RecipeList />} />
+                    <Route path='*' element={<Navigate to='/home' />} />
+                    </Routes>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </React.Fragment>
     )
 }

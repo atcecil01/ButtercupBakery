@@ -20,7 +20,7 @@ function RecipeList() {
 
     return (
         <Fragment>
-            <div>Recipes:</div>
+            <h2 id="pagetitle">Recipes</h2>
             <Link to='/AddRecipe'><button>Add New Recipe</button></Link>
             {contents}
         </Fragment>
