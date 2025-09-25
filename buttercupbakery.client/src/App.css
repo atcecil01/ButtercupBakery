@@ -5,6 +5,11 @@
     font-family: cursive;
     height: 100vh;
 
+    --header-color-1: #FAF4F9;
+    --header-color-2: #E7D0E4;
+    --header-color-3: #AB6BA1;
+    --header-color-4: #883B7C;
+
     --primary-color: #CC9FC5;
     --text-color: #FAF4F9;
     --text-color-dark: #613E82;
@@ -54,7 +59,7 @@ textarea {
 }
 
 #maintitle {
-    padding: 2rem;
+    padding: .75rem 2rem 2rem 2rem;
     background-color: var(--primary-color);
     margin-bottom: 0px;
 }
@@ -116,4 +121,10 @@ textarea {
 
 .row{
     padding: .5rem;
+}
+
+.scallop-bottom {
+  mask: 
+    linear-gradient(0,#0000 1vw,#000 0),
+    radial-gradient(1vw,#000 calc(100% - 1px),#0000) bottom/1.85vw 2vw
 }
