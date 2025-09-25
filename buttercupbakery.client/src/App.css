@@ -43,6 +43,16 @@ button:hover {
     background-color: var(--button-color-hover);
 }
 
+input, select {
+    border-radius: 0.375rem;
+}
+
+textarea {
+    border-radius: 0.375rem;
+    min-height: 10rem;
+    width: -webkit-fill-available;
+}
+
 #maintitle {
     padding: 2rem;
     background-color: var(--primary-color);
@@ -102,4 +112,8 @@ button:hover {
   width: .5em;
   background-color: var(--secondary-color);
   margin: 3px 10px 0px 0px;
+}
+
+.row{
+    padding: .5rem;
 }

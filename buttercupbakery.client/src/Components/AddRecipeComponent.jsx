@@ -6,29 +6,48 @@ function AddRecipe() {
         <Fragment>
             <h2 id="pagetitle">Add Recipe</h2>
             <form>
-                <label>Recipe Name: </label>
-                <input type='text' name='recipeName' />
-                <br />
-
-                <label>Description: </label>
-                <input type='text' name='description' />
-                <br />
-
-                <label>Preparation Time: </label>
-                <input type='number' name='preparationTime' />
-                <br />
-
-                <label>Category: </label>
-                <select name='category' />
-                <br />
-
-                <label>Ingredients: </label>
-                <textarea name='ingredients' />
-                <br />
-
-                <label>Instructions: </label>
-                <textarea name='instructions' />
-                <br />
+                <div class="row">
+                    <div class="col-md-2 text-start">
+                        <label>Recipe Name: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <input type='text' name='recipeName' />
+                    </div>
+                    <div class="col-md-2 text-start">
+                        <label>Description: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <input type='text' name='description' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-start">
+                        <label>Preparation Time: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <input type='number' name='preparationTime' />
+                    </div>
+                    <div class="col-md-2 text-start">
+                        <label>Category: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <select name='category' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-start">
+                        <label>Ingredients: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <textarea name='ingredients' />
+                    </div>
+                    <div class="col-md-2 text-start">
+                        <label>Instructions: </label>
+                    </div>
+                    <div class="col-md-4 text-start">
+                        <textarea name='instructions' />
+                    </div>
+                </div>
 
                 <button type='submit'>Submit</button>
             </form>
