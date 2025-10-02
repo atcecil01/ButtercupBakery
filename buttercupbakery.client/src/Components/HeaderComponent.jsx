@@ -9,7 +9,8 @@ function Header() {
                     <div className="col-md-2" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-1)' }} />
                     <div className="col-md-2" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-2)' }} />
                     <div className="col-md-2" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-3)' }} />
-                    <div className="col-md-5" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-4)' }} />
+                    <div className="col-md-2" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-4)' }} />
+                    <div className="col-md-3" style={{ height: '.5em', margin: '3px 10px 0px 0px', backgroundColor: 'var(--header-color-3)' }} />
                 </div>
                 Buttercup Bakery</h1>
             <nav className='navbar'>

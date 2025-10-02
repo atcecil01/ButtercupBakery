@@ -61,6 +61,7 @@ textarea {
 #maintitle {
     padding: .75rem 2rem 2rem 2rem;
     background-color: var(--primary-color);
+    color: var(--header-color-4);
     margin-bottom: 0px;
 }
 
